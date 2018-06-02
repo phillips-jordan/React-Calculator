@@ -94,9 +94,7 @@ class Keys extends Component {
 
     let equationArray = current.filter(x => x);
     let parensTest = this.parensEval(equationArray);
-    console.log(parensTest);
     equationArray = this.evaluateEquation(equationArray);
-    console.log(equationArray);
     let result = equationArray[0]
     this.setState({ equation: '', result });
   };
@@ -144,7 +142,6 @@ class Keys extends Component {
   };
 
 parensEval = arr =>{
-    console.log(arr)
     for(let i=arr.length-1;i>=0;i--){
         if(arr[i]==='('){
             let evalu = [...arr]
@@ -158,7 +155,6 @@ parensEval = arr =>{
             arr[i]=result[0]
         }
     }
-    console.log(arr)
     return arr
 }
 
